@@ -2,9 +2,11 @@ export const site = {
   name: "MI Property Cleanouts",
   legalName: "MI Property Cleanouts",
   tagline: "Michigan Property & Estate Cleanout Specialists",
-  shortTagline: "Estate, home, rental & property cleanouts throughout Michigan's Blue Water Area.",
+  brandTagline: "Compassionate. Professional. Thorough.",
+  shortTagline:
+    "Estate, home, rental & property cleanouts throughout Michigan's Blue Water Area.",
   description:
-    "Estate, home, rental, and property cleanouts throughout Michigan's Blue Water Area. We empty properties so they are ready for cleaning, repairs, sale, or the next tenant.",
+    "Estate, probate, hoarding, rental, eviction, and foreclosure cleanouts in Michigan's Blue Water Area. Compassionate, professional, thorough. Free estimates.",
   url: "https://mipropertycleanouts.com",
   phone: "(810) 241-0000",
   phoneHref: "tel:+18102410000",
@@ -12,6 +14,7 @@ export const site = {
   location: "Port Huron, MI",
   operator: "Junk Command of MI",
   estimatePath: "/estimate",
+  gaId: "G-ZZQ2004B7K",
   ghlFormId: "dWTCBGKCP4xzN2lCjyCp",
   ghlFormUrl: "https://api.leadconnectorhq.com/widget/form/dWTCBGKCP4xzN2lCjyCp",
   ghlFormIframeId: "inline-dWTCBGKCP4xzN2lCjyCp",

@@ -10,7 +10,7 @@ import { images, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "MI Property Cleanouts is a local, veteran-owned, fully insured property cleanout team serving Michigan's Blue Water Area. Cleanout services performed by Junk Command of MI.",
+    "MI Property Cleanouts is a local, veteran-owned, fully insured team for estate, probate, hoarding, rental, and foreclosure cleanouts in Michigan's Blue Water Area.",
 };
 
 export default function AboutPage() {

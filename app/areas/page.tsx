@@ -9,7 +9,7 @@ import { cities, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Areas We Serve",
   description:
-    "MI Property Cleanouts serves Port Huron, Marysville, Fort Gratiot, and Michigan's Blue Water Area.",
+    "MI Property Cleanouts serves Port Huron, Marysville, Fort Gratiot, St. Clair County, and Michigan's Blue Water Area for estate, hoarding, rental, and property cleanouts.",
 };
 
 export default function AreasPage() {

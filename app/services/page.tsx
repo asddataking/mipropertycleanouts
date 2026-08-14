@@ -6,7 +6,7 @@ import { PageHero } from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "Property Cleanout Services",
   description:
-    "Estate, rental, whole-home, hoarding, garage, barn, and pre-sale property cleanouts throughout Michigan's Blue Water Area.",
+    "Estate, probate, hoarding, rental, eviction, foreclosure, garage, and pre-sale property cleanouts throughout Michigan's Blue Water Area.",
 };
 
 export default function ServicesPage() {

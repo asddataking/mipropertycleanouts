@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Nunito } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Header } from "@/components/Header";
+import { localBusinessJsonLd } from "@/lib/schema";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -18,6 +21,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  applicationName: site.name,
   openGraph: {
     title: `${site.name} | Michigan Property & Estate Cleanouts`,
     description: site.description,
@@ -26,23 +30,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: site.name,
-  description: site.description,
-  url: site.url,
-  telephone: site.phone,
-  email: site.email,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Port Huron",
-    addressRegion: "MI",
-    addressCountry: "US",
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} | Michigan Property & Estate Cleanouts`,
+    description: site.description,
   },
-  areaServed: "Michigan Blue Water Area",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -51,16 +47,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white font-sans text-ink">
+    <html lang="en" className={`${nunito.variable} h-full antialiased`}>
+      <body className={`${nunito.className} min-h-full flex flex-col bg-white font-sans text-ink`}>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
+      <GoogleAnalytics />
     </html>
   );
 }

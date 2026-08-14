@@ -6,6 +6,7 @@ import { Container } from "@/components/Container";
 import { CheckItem } from "@/components/Icons";
 import { PhotoCta } from "@/components/home/PhotoCta";
 import { PageHero } from "@/components/PageHero";
+import { serviceJsonLd } from "@/lib/schema";
 import { getService, services, site } from "@/lib/site";
 
 type Props = {
@@ -21,8 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getService(slug);
   if (!service) return {};
   return {
-    title: service.title,
-    description: service.short,
+    title: `${service.title} in Michigan`,
+    description: `${service.short} Serving Port Huron and Michigan's Blue Water Area.`,
   };
 }
 
@@ -33,6 +34,12 @@ export default async function ServicePage({ params }: Props) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceJsonLd(service)),
+        }}
+      />
       <PageHero label="Services" title={service.title} body={service.short} />
       <section className="py-16 lg:py-24">
         <Container className="grid items-start gap-12 lg:grid-cols-2">

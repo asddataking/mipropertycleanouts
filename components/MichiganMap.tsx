@@ -16,18 +16,18 @@ export function MichiganMap({ className = "" }: { className?: string }) {
       />
       <path
         d="M210 168c20-8 40 0 50 18 10 16 22 24 34 42 8 14 6 30-8 40-16 12-38 12-54 4-16-8-28 0-34 14-6 14-20 22-36 16-14-6-20-20-14-34 6-16-2-28-14-36-12-10-10-26 2-36 16-14 32-18 42-24 10-6 20-16 34-18z"
-        fill="#2d4628"
+        fill="#387028"
       />
       <circle cx="252" cy="218" r="8" fill="#ffffff" />
-      <circle cx="252" cy="218" r="4" fill="#2d4628" />
+      <circle cx="252" cy="218" r="4" fill="#387028" />
       <text
         x="252"
         y="250"
         textAnchor="middle"
-        fill="#0f1d39"
+        fill="#002848"
         fontSize="11"
         fontWeight="700"
-        fontFamily="Montserrat, sans-serif"
+        fontFamily="Nunito, sans-serif"
       >
         Blue Water Area
       </text>
