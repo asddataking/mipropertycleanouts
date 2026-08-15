@@ -52,7 +52,7 @@ export function ServicesGrid({
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-muted">{service.short}</p>
                 </div>
-                <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-orange text-cream">
+                <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-orange text-navy">
                   <ArrowUpRight className="h-4 w-4" />
                 </span>
               </div>

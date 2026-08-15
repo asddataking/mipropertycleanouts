@@ -19,7 +19,7 @@ export function PartnersBand() {
       />
       <Container className="relative grid items-center gap-14 lg:grid-cols-2">
         <div>
-          <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-orange text-cream">
+          <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-orange text-navy">
             <Users className="h-6 w-6" />
           </div>
           <h2 className="font-serif text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
@@ -45,7 +45,7 @@ export function PartnersBand() {
                 key={value.title}
                 className="rounded-3xl border border-cream/15 bg-cream/5 p-5"
               >
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-orange/90 text-cream">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-orange text-navy">
                   <Icon className="h-5 w-5" />
                 </span>
                 <h3 className="mt-4 font-serif text-xl font-medium">{value.title}</h3>

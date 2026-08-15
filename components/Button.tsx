@@ -9,13 +9,13 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-orange text-cream hover:bg-orange-dark border border-orange",
+    "bg-green text-cream hover:bg-green-dark border border-green",
   outline:
-    "bg-transparent text-green border border-green hover:bg-green hover:text-cream",
+    "bg-transparent text-navy border border-green/40 hover:bg-green hover:text-cream hover:border-green",
   outlineLight:
-    "bg-transparent text-cream border border-cream/70 hover:bg-cream hover:text-navy",
+    "bg-transparent text-cream border border-cream/80 hover:bg-cream hover:text-navy",
   outlineDark:
-    "bg-transparent text-navy border border-navy/25 hover:border-navy hover:bg-navy hover:text-cream",
+    "bg-transparent text-navy border border-navy/20 hover:border-navy hover:bg-navy hover:text-cream",
 };
 
 export function Button({

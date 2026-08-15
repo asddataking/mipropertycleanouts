@@ -12,7 +12,7 @@ export function PhotoCta() {
             className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-orange/25 blur-2xl"
             aria-hidden="true"
           />
-          <span className="relative inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-orange text-cream">
+          <span className="relative inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-orange text-navy">
             <Camera className="h-6 w-6" />
           </span>
           <div className="relative mt-5 flex-1 sm:mt-0">
@@ -24,7 +24,7 @@ export function PhotoCta() {
             </p>
           </div>
           <div className="relative mt-6 text-center sm:mt-0">
-            <Button href={site.estimatePath}>
+            <Button href={site.estimatePath} variant="outlineLight">
               Upload Photos & Get an Estimate
             </Button>
             <p className="mt-3 text-xs text-cream/60">

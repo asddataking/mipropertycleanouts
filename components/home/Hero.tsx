@@ -13,8 +13,12 @@ export function Hero() {
           priority
           speed={0.32}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/50 to-navy/15" />
-        <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-navy/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/75 via-navy/35 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-orange/20" />
+        <div
+          className="pointer-events-none absolute -right-10 top-0 h-80 w-80 rounded-full bg-orange/30 blur-3xl"
+          aria-hidden="true"
+        />
 
         <div className="relative mx-auto flex min-h-[88vh] max-w-6xl items-end px-5 pb-28 pt-32 lg:items-center lg:px-8 lg:pb-36">
           <div className="max-w-2xl">
@@ -47,7 +51,7 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto -mt-16 max-w-6xl px-5 lg:px-8">
-        <ul className="grid gap-px overflow-hidden rounded-3xl border border-line bg-line shadow-[0_24px_60px_-28px_rgba(44,42,36,0.45)] sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid gap-px overflow-hidden rounded-3xl border border-line bg-line shadow-[0_24px_60px_-28px_rgba(27,61,77,0.35)] sm:grid-cols-2 lg:grid-cols-4">
           {heroChecks.map((item) => (
             <li
               key={item}
@@ -65,7 +69,7 @@ export function Hero() {
 function Trust({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
     <div className="flex items-center gap-2.5 text-sm font-semibold">
-      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-orange text-cream">
+      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-orange text-navy">
         {icon}
       </span>
       {label}
