@@ -12,41 +12,44 @@ const icons = {
 
 export function PartnersBand() {
   return (
-    <section className="bg-navy py-16 text-white lg:py-20">
-      <Container className="grid items-center gap-12 lg:grid-cols-2">
+    <section className="relative overflow-hidden bg-green py-20 text-cream lg:py-24">
+      <div
+        className="pointer-events-none absolute -left-20 top-0 h-72 w-72 rounded-full bg-orange/15 blur-3xl"
+        aria-hidden="true"
+      />
+      <Container className="relative grid items-center gap-14 lg:grid-cols-2">
         <div>
-          <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10">
+          <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-orange text-cream">
             <Users className="h-6 w-6" />
           </div>
-          <h2 className="text-3xl font-extrabold leading-tight sm:text-4xl">
-            Have Properties That Regularly Need Cleared?
+          <h2 className="font-serif text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
+            Have properties that regularly need cleared?
           </h2>
-          <p className="mt-4 max-w-lg text-[15px] leading-7 text-white/75">
+          <p className="mt-5 max-w-lg text-[16px] leading-8 text-cream/80">
             We work with realtors, property managers, estate attorneys, and
             landlords who need a reliable crew for full-property cleanouts —
             not one-item junk pickups.
           </p>
-          <div className="mt-7">
+          <div className="mt-8">
             <Button href="/partners" variant="outlineLight">
               Become a Property Partner
             </Button>
           </div>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2">
           {partnerValues.map((value) => {
             const Icon = icons[value.icon];
             return (
-              <div key={value.title} className="flex gap-4">
-                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10">
+              <div
+                key={value.title}
+                className="rounded-3xl border border-cream/15 bg-cream/5 p-5"
+              >
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-orange/90 text-cream">
                   <Icon className="h-5 w-5" />
                 </span>
-                <div>
-                  <h3 className="font-extrabold">{value.title}</h3>
-                  <p className="mt-1 text-sm leading-6 text-white/70">
-                    {value.body}
-                  </p>
-                </div>
+                <h3 className="mt-4 font-serif text-xl font-medium">{value.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-cream/70">{value.body}</p>
               </div>
             );
           })}

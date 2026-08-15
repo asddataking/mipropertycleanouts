@@ -19,7 +19,7 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-white">
+    <header className="sticky top-0 z-50 border-b border-line/80 bg-cream/80 backdrop-blur-md">
       <div className="mx-auto flex h-[88px] max-w-6xl items-center justify-between gap-4 px-5 lg:px-8">
         <Logo />
 
@@ -31,20 +31,20 @@ export function Header() {
                   href={link.href}
                   className={`inline-flex items-center gap-1 text-[13px] font-semibold tracking-wide ${
                     pathname.startsWith("/services")
-                      ? "text-green"
-                      : "text-navy hover:text-green"
+                      ? "text-orange"
+                      : "text-navy hover:text-orange"
                   }`}
                 >
                   {link.label}
                   <ChevronDown className="h-3.5 w-3.5" />
                 </Link>
                 <div className="invisible absolute left-1/2 top-full z-20 w-64 -translate-x-1/2 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100">
-                  <div className="rounded-sm border border-line bg-white py-2 shadow-lg">
+                  <div className="rounded-2xl border border-line bg-cream py-2 shadow-lg">
                     {services.map((service) => (
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}`}
-                        className="block px-4 py-2 text-[13px] font-medium text-navy hover:bg-band hover:text-green"
+                        className="block px-4 py-2 text-[13px] font-medium text-navy hover:bg-band hover:text-orange"
                       >
                         {service.title}
                       </Link>
@@ -58,8 +58,8 @@ export function Header() {
                 href={link.href}
                 className={`text-[13px] font-semibold tracking-wide ${
                   isActive(link.href)
-                    ? "text-green"
-                    : "text-navy hover:text-green"
+                    ? "text-orange"
+                    : "text-navy hover:text-orange"
                 }`}
               >
                 {link.label}
@@ -74,7 +74,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-line text-navy lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-navy lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-label={open ? "Close menu" : "Open menu"}
         >
@@ -83,7 +83,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-line bg-white px-5 py-4 lg:hidden">
+        <div className="border-t border-line bg-cream px-5 py-4 lg:hidden">
           <nav className="flex flex-col gap-1">
             {navLinks.map((link) =>
               "children" in link && link.children ? (

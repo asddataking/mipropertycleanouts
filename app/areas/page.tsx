@@ -24,7 +24,7 @@ export default function AreasPage() {
         <Container className="grid items-center gap-12 lg:grid-cols-2">
           <MichiganMap className="h-auto w-full max-w-md justify-self-center" />
           <div>
-            <h2 className="text-2xl font-extrabold text-navy">
+            <h2 className="font-serif text-3xl font-medium tracking-tight text-navy sm:text-4xl">
               Cities and townships we regularly serve
             </h2>
             <p className="mt-4 text-[15px] leading-7 text-muted">

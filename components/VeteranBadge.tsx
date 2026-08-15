@@ -1,10 +1,10 @@
 export function VeteranBadge({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`flex w-[168px] flex-col items-center rounded-sm border border-white/20 bg-navy-deep px-3 py-3 text-center ${className}`}
+      className={`flex w-[168px] flex-col items-center rounded-2xl border border-cream/20 bg-navy-deep px-3 py-3 text-center ${className}`}
     >
       <svg viewBox="0 0 64 40" className="h-8 w-12" aria-hidden="true">
-        <rect width="64" height="40" fill="#002848" />
+        <rect width="64" height="40" fill="#2c2a24" />
         <rect width="28" height="22" fill="#3C3B6E" />
         <g fill="#ffffff">
           {Array.from({ length: 5 }).map((_, row) =>

@@ -9,13 +9,13 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-green text-white hover:bg-green-dark border border-green",
+    "bg-orange text-cream hover:bg-orange-dark border border-orange",
   outline:
-    "bg-white text-green border border-green hover:bg-green hover:text-white",
+    "bg-transparent text-green border border-green hover:bg-green hover:text-cream",
   outlineLight:
-    "bg-transparent text-white border border-white hover:bg-white hover:text-navy",
+    "bg-transparent text-cream border border-cream/70 hover:bg-cream hover:text-navy",
   outlineDark:
-    "bg-white text-navy border border-navy/20 hover:border-navy hover:bg-navy hover:text-white",
+    "bg-transparent text-navy border border-navy/25 hover:border-navy hover:bg-navy hover:text-cream",
 };
 
 export function Button({
@@ -24,7 +24,7 @@ export function Button({
   variant = "primary",
   className = "",
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center gap-2 rounded-sm px-6 py-3 text-center text-[13px] font-extrabold tracking-wide uppercase transition-colors ${variants[variant]} ${className}`;
+  const classes = `inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-center text-[13px] font-bold tracking-[0.08em] uppercase transition-colors ${variants[variant]} ${className}`;
   const isExternal =
     href.startsWith("http") ||
     href.startsWith("tel:") ||

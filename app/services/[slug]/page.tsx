@@ -43,7 +43,7 @@ export default async function ServicePage({ params }: Props) {
       <PageHero label="Services" title={service.title} body={service.short} />
       <section className="py-16 lg:py-24">
         <Container className="grid items-start gap-12 lg:grid-cols-2">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem]">
             <Image
               src={service.cardImage}
               alt={service.title}

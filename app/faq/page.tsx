@@ -37,14 +37,14 @@ export default function FaqPage() {
       />
       <section className="py-16 lg:py-20">
         <Container className="max-w-3xl">
-          <div className="divide-y divide-line rounded-sm border border-line bg-white">
+          <div className="divide-y divide-line overflow-hidden rounded-[1.75rem] border border-line bg-cream">
             {faqs.map((faq) => (
               <details key={faq.question} className="group px-6 py-2">
-                <summary className="cursor-pointer list-none py-4 text-left text-base font-extrabold text-navy marker:content-none [&::-webkit-details-marker]:hidden">
+                <summary className="cursor-pointer list-none py-4 text-left font-serif text-lg font-medium text-navy marker:content-none [&::-webkit-details-marker]:hidden">
                   <span className="flex items-center justify-between gap-4">
                     {faq.question}
-                    <span className="text-green group-open:hidden">+</span>
-                    <span className="hidden text-green group-open:inline">−</span>
+                    <span className="text-orange group-open:hidden">+</span>
+                    <span className="hidden text-orange group-open:inline">−</span>
                   </span>
                 </summary>
                 <p className="pb-5 text-sm leading-7 text-muted">{faq.answer}</p>

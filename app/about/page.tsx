@@ -23,7 +23,7 @@ export default function AboutPage() {
       />
       <section className="py-16 lg:py-24">
         <Container className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem]">
             <Image
               src={images.about}
               alt="Michigan home ready for a property cleanout"
@@ -33,7 +33,7 @@ export default function AboutPage() {
             />
           </div>
           <div>
-            <h2 className="text-2xl font-extrabold text-navy">
+            <h2 className="font-serif text-3xl font-medium tracking-tight text-navy sm:text-4xl">
               More than a pickup. We clear the property.
             </h2>
             <p className="mt-4 text-[15px] leading-7 text-muted">

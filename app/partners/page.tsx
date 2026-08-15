@@ -35,12 +35,12 @@ export default function PartnersPage() {
               return (
                 <div
                   key={value.title}
-                  className="rounded-sm border border-line bg-white p-6"
+                  className="rounded-[1.75rem] border border-line bg-cream p-6"
                 >
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-green text-white">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-green text-cream">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <h2 className="mt-4 text-xl font-extrabold text-navy">
+                  <h2 className="mt-4 font-serif text-2xl font-medium text-navy">
                     {value.title}
                   </h2>
                   <p className="mt-2 text-sm leading-6 text-muted">
@@ -50,8 +50,8 @@ export default function PartnersPage() {
               );
             })}
           </div>
-          <div className="mt-12 rounded-sm bg-band p-8 text-center">
-            <h2 className="text-2xl font-extrabold text-navy">
+          <div className="mt-12 rounded-[2rem] bg-band p-8 text-center">
+            <h2 className="font-serif text-3xl font-medium tracking-tight text-navy">
               Ready to send us a property?
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-muted">

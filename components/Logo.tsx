@@ -8,8 +8,8 @@ type LogoProps = {
 };
 
 export function Logo({ variant = "dark", className = "" }: LogoProps) {
-  const word = variant === "light" ? "text-white" : "text-navy";
-  const sub = variant === "light" ? "text-white/70" : "text-muted";
+  const word = variant === "light" ? "text-cream" : "text-navy";
+  const sub = variant === "light" ? "text-cream/70" : "text-muted";
   const mark = (
     <Image
       src="/logo-nav.png"
@@ -28,7 +28,7 @@ export function Logo({ variant = "dark", className = "" }: LogoProps) {
       aria-label={site.name}
     >
       {variant === "light" ? (
-        <span className="shrink-0 rounded-md bg-white px-2 py-1">{mark}</span>
+        <span className="shrink-0 rounded-xl bg-cream px-2 py-1">{mark}</span>
       ) : (
         mark
       )}

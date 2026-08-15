@@ -46,7 +46,7 @@ export function CircleIcon({
 }) {
   return (
     <span
-      className={`inline-flex h-12 w-12 items-center justify-center rounded-full bg-green text-white ${className}`}
+      className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-green text-cream ${className}`}
     >
       {children}
     </span>
@@ -56,7 +56,7 @@ export function CircleIcon({
 export function CheckItem({ children }: { children: React.ReactNode }) {
   return (
     <li className="flex items-start gap-3 text-sm leading-6 text-ink">
-      <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green text-white">
+      <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange text-cream">
         <Check className="h-3 w-3" strokeWidth={3} />
       </span>
       <span>{children}</span>
