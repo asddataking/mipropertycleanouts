@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Property Cleanout Services",
   description:
     "Estate, probate, hoarding, rental, eviction, foreclosure, garage, and pre-sale property cleanouts throughout Michigan's Blue Water Area.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function ServicesPage() {

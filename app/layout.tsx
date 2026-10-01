@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     title: `${site.name} | Michigan Property & Estate Cleanouts`,
     description: site.description,
@@ -63,8 +66,8 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <GoogleAnalytics />
       </body>
-      <GoogleAnalytics />
     </html>
   );
 }

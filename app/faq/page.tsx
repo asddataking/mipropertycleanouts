@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "FAQ",
   description:
     "Answers about property cleanouts, estimates, photos, and service in Michigan's Blue Water Area.",
+  alternates: {
+    canonical: "/faq",
+  },
 };
 
 const faqJsonLd = {

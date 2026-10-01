@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Get a Free Estimate",
   description:
     "Upload photos or request a walkthrough for a property cleanout estimate in Michigan's Blue Water Area.",
+  alternates: {
+    canonical: "/estimate",
+  },
 };
 
 export default function EstimatePage() {

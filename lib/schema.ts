@@ -36,7 +36,7 @@ export const localBusinessJsonLd = {
       url: site.url,
       image: `${site.url}/logo.png`,
       logo: `${site.url}/logo.png`,
-      telephone: "+1-810-241-0000",
+      telephone: site.phoneSchema,
       email: site.email,
       priceRange: "$$",
       currenciesAccepted: "USD",

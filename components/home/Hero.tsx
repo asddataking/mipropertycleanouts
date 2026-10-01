@@ -1,4 +1,4 @@
-import { Camera, MapPin, Shield, Star } from "lucide-react";
+import { Camera, MapPin, Phone, Shield, Star } from "lucide-react";
 import { Button } from "@/components/Button";
 import { ParallaxImage } from "@/components/ParallaxImage";
 import { heroChecks, images, site } from "@/lib/site";
@@ -34,8 +34,12 @@ export function Hero() {
               property so it is empty and ready for cleaning, repairs, listing,
               or the next tenant.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button href={site.estimatePath}>Get a Free Estimate</Button>
+              <Button href={site.phoneHref} variant="outlineLight">
+                <Phone className="h-4 w-4" />
+                Call {site.phone}
+              </Button>
               <Button href={site.estimatePath} variant="outlineLight">
                 <Camera className="h-4 w-4" />
                 Upload Photos
