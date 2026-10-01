@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Property Partners",
   description:
     "Work with MI Property Cleanouts for recurring estate, rental, and pre-sale property cleanouts in Michigan's Blue Water Area.",
+  alternates: {
+    canonical: "/partners",
+  },
 };
 
 const icons = {

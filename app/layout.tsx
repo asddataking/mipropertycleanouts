@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     title: `${site.name} | Michigan Property & Estate Cleanouts`,
     description: site.description,

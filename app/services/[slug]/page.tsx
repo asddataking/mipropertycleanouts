@@ -24,6 +24,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${service.title} in Michigan`,
     description: `${service.short} Serving Port Huron and Michigan's Blue Water Area.`,
+    alternates: {
+      canonical: `/services/${slug}`,
+    },
   };
 }
 

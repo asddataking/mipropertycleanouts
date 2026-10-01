@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/Button";
 import { Logo } from "@/components/Logo";
@@ -68,18 +68,30 @@ export function Header() {
           )}
         </nav>
 
-        <div className="hidden lg:block">
-          <Button href={site.estimatePath}>Get a Free Estimate</Button>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <Button
+            href={site.phoneHref}
+            className="px-4 py-2.5 text-[12px] lg:hidden"
+          >
+            <Phone className="h-4 w-4" />
+            Call
+          </Button>
+          <div className="hidden items-center gap-3 lg:flex">
+            <Button href={site.phoneHref} variant="outline">
+              <Phone className="h-4 w-4" />
+              {site.phone}
+            </Button>
+            <Button href={site.estimatePath}>Get a Free Estimate</Button>
+          </div>
+          <button
+            type="button"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-navy lg:hidden"
+            onClick={() => setOpen((value) => !value)}
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
-
-        <button
-          type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-navy lg:hidden"
-          onClick={() => setOpen((value) => !value)}
-          aria-label={open ? "Close menu" : "Open menu"}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
       </div>
 
       {open ? (
@@ -131,7 +143,11 @@ export function Header() {
                 </Link>
               ),
             )}
-            <Button href={site.estimatePath} className="mt-3 w-full">
+            <Button href={site.phoneHref} variant="outline" className="mt-3 w-full">
+              <Phone className="h-4 w-4" />
+              Call {site.phone}
+            </Button>
+            <Button href={site.estimatePath} className="mt-2 w-full">
               Get a Free Estimate
             </Button>
           </nav>

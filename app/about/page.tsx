@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "MI Property Cleanouts is a local, veteran-owned, fully insured team for estate, probate, hoarding, rental, and foreclosure cleanouts in Michigan's Blue Water Area.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {
