@@ -30,10 +30,10 @@ export function AnalyticsEvents() {
     }
 
     document.addEventListener("click", onClick);
-    window.addEventListener("message", onMessage);
+    window.addEventListener("message", onMessage, true);
     return () => {
       document.removeEventListener("click", onClick);
-      window.removeEventListener("message", onMessage);
+      window.removeEventListener("message", onMessage, true);
     };
   }, []);
 
