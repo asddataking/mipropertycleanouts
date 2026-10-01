@@ -8,9 +8,9 @@ export const site = {
   description:
     "Estate, probate, hoarding, rental, eviction, and foreclosure cleanouts in Michigan's Blue Water Area. Compassionate, professional, thorough. Free estimates.",
   url: "https://www.mipropertycleanouts.com",
-  phone: "(810) 242-0429",
-  phoneHref: "tel:+18102420429",
-  phoneSchema: "+1-810-242-0429",
+  phone: "(810) 242-0140",
+  phoneHref: "tel:+18102420140",
+  phoneSchema: "+1-810-242-0140",
   email: "info@mipropertycleanouts.com",
   location: "Port Huron, MI",
   operator: "Junk Command of MI",
