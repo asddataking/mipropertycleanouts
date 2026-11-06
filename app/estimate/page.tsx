@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { GhlFormEmbed } from "@/components/GhlFormEmbed";
-import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Get a Free Estimate",
@@ -15,12 +14,17 @@ export const metadata: Metadata = {
 export default function EstimatePage() {
   return (
     <>
-      <PageHero
-        label="Free Estimate"
-        title="Show us the property. We'll put together a clear estimate."
-        body="Upload photos or tell us what you're dealing with. No obligation. Local Michigan service."
-      />
-      <section className="py-16 lg:py-20">
+      <section className="bg-navy py-6 text-white lg:py-10">
+        <Container className="max-w-4xl">
+          <h1 className="font-serif text-2xl font-medium leading-tight sm:text-4xl">
+            Free property cleanout estimate
+          </h1>
+          <p className="mt-2 text-[15px] leading-6 text-white/80">
+            Add a few photos below and we&apos;ll send a clear estimate. No obligation.
+          </p>
+        </Container>
+      </section>
+      <section className="py-4 lg:py-12">
         <Container className="max-w-4xl">
           <GhlFormEmbed />
         </Container>

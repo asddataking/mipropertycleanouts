@@ -1,3 +1,4 @@
+import type { AreaPage } from "@/lib/areas";
 import { cities, services, site } from "@/lib/site";
 
 const extraServices = [
@@ -133,6 +134,50 @@ export function serviceJsonLd(service: {
         "@type": "AdministrativeArea",
         name: "Blue Water Area",
         containedInPlace: { "@type": "State", name: "Michigan" },
+      },
+    ],
+  };
+}
+
+export function areaJsonLd(page: AreaPage) {
+  const url = `${site.url}/areas/${page.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: `Estate & Property Cleanouts in ${page.placeName}, MI`,
+        serviceType: "Property cleanout",
+        description: page.metaDescription,
+        url,
+        provider: { "@id": `${site.url}/#business` },
+        areaServed: {
+          "@type": "City",
+          name: page.placeName,
+          containedInPlace: { "@type": "State", name: "Michigan" },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: page.geo.latitude,
+            longitude: page.geo.longitude,
+          },
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+          { "@type": "ListItem", position: 2, name: "Areas We Serve", item: `${site.url}/areas` },
+          { "@type": "ListItem", position: 3, name: page.name, item: url },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: page.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
       },
     ],
   };

@@ -4,12 +4,14 @@ import { Container } from "@/components/Container";
 import { PhotoCta } from "@/components/home/PhotoCta";
 import { MichiganMap } from "@/components/MichiganMap";
 import { PageHero } from "@/components/PageHero";
+import Link from "next/link";
+import { areaPages } from "@/lib/areas";
 import { cities, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Areas We Serve",
   description:
-    "MI Property Cleanouts serves Port Huron, Marysville, Fort Gratiot, St. Clair County, and Michigan's Blue Water Area for estate, hoarding, rental, and property cleanouts.",
+    "Property cleanouts in Port Huron, Marysville, Fort Gratiot, St. Clair and the Blue Water Area. Estate, pre-sale, rental and whole-house cleanouts. Call (810) 242-0140.",
   alternates: {
     canonical: "/areas",
   },
@@ -43,6 +45,23 @@ export default function AreasPage() {
             <div className="mt-8">
               <Button href={site.estimatePath}>Request Your Estimate</Button>
             </div>
+          </div>
+        </Container>
+      </section>
+      <section className="pb-16 lg:pb-24">
+        <Container>
+          <h2 className="font-serif text-3xl font-medium text-navy">Property cleanouts by city</h2>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {areaPages.map((area) => (
+              <Link
+                key={area.slug}
+                href={`/areas/${area.slug}`}
+                className="rounded-2xl border border-line bg-cream p-5 transition-colors hover:border-green"
+              >
+                <span className="block font-serif text-xl text-navy">{area.name}</span>
+                <span className="mt-1 block text-sm text-muted">Estate &amp; pre-sale cleanouts</span>
+              </Link>
+            ))}
           </div>
         </Container>
       </section>
