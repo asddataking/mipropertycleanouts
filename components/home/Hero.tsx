@@ -6,7 +6,7 @@ import { heroChecks, images, site } from "@/lib/site";
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="relative min-h-[88vh]">
+      <div className="relative min-h-[70vh] lg:min-h-[88vh]">
         <ParallaxImage
           src={images.hero}
           alt="Crew loading a property cleanout at a Michigan home"
@@ -20,14 +20,14 @@ export function Hero() {
           aria-hidden="true"
         />
 
-        <div className="relative mx-auto flex min-h-[88vh] max-w-6xl items-end px-5 pb-28 pt-32 lg:items-center lg:px-8 lg:pb-36">
+        <div className="relative mx-auto flex min-h-[70vh] max-w-6xl items-start px-5 pb-24 pt-10 lg:min-h-[88vh] lg:items-center lg:px-8 lg:pb-36 lg:pt-32">
           <div className="max-w-2xl">
             <p className="flex items-center gap-3 text-[12px] font-bold tracking-[0.22em] text-orange uppercase">
               <span className="h-px w-8 bg-orange" aria-hidden="true" />
               Michigan&apos;s Blue Water Area
             </p>
-            <h1 className="mt-5 font-serif text-5xl font-medium leading-[1.05] tracking-tight text-cream sm:text-6xl lg:text-7xl">
-              Need an entire property cleaned out?
+            <h1 className="mt-5 font-serif text-4xl font-medium leading-[1.05] tracking-tight text-cream sm:text-6xl lg:text-7xl">
+              Property cleanouts for Michigan homes, estates &amp; rentals
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-8 text-cream/85">
               Estates, rentals, sales, and overwhelmed homes. We clear the
@@ -35,14 +35,13 @@ export function Hero() {
               or the next tenant.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Button href={site.estimatePath}>Get a Free Estimate</Button>
+              <Button href={site.estimatePath}>
+                <Camera className="h-4 w-4" />
+                Upload Photos · Free Estimate
+              </Button>
               <Button href={site.phoneHref} variant="outlineLight">
                 <Phone className="h-4 w-4" />
                 Call {site.phone}
-              </Button>
-              <Button href={site.estimatePath} variant="outlineLight">
-                <Camera className="h-4 w-4" />
-                Upload Photos
               </Button>
             </div>
             <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-cream">

@@ -19,6 +19,8 @@ export const site = {
   ghlFormId: "dWTCBGKCP4xzN2lCjyCp",
   ghlFormUrl: "https://api.leadconnectorhq.com/widget/form/dWTCBGKCP4xzN2lCjyCp",
   ghlFormIframeId: "inline-dWTCBGKCP4xzN2lCjyCp",
+  /** Paste the Google Maps embed URL here once the Business Profile exists. Empty = render nothing. */
+  gbpMapEmbedUrl: "",
 } as const;
 
 export const navLinks = [
@@ -136,6 +138,9 @@ export type Service = {
   icon: ServiceIcon;
   intro: string;
   points: string[];
+  metaTitle?: string;
+  metaDescription?: string;
+  body?: { heading: string; text: string }[];
 };
 
 export const services: Service[] = [
@@ -149,6 +154,14 @@ export const services: Service[] = [
     icon: "home",
     intro:
       "When a home is left behind, families need the property emptied so it can be sold, transferred, or prepared for the next chapter. We handle full estate cleanouts throughout Michigan's Blue Water Area.",
+    metaTitle: "Estate Cleanouts in Michigan | Probate & Real Estate Cleanouts",
+    metaDescription:
+      "Estate cleanouts in Port Huron and Michigan's Blue Water Area. We empty inherited and probate homes for families, executors and realtors, from basement to garage. Free photo estimate.",
+    body: [
+      { heading: "Estate cleanouts for families and executors", text: "Clearing a loved one's home is hard. We work at your pace, set aside photos, paperwork and keepsakes you ask us to watch for, donate usable furniture where we can, and haul the rest so the house can be appraised, listed or transferred." },
+      { heading: "Real estate and probate cleanouts", text: "Realtors, attorneys and personal representatives use us when an estate property has to be empty by a closing or court date. Send photos and the deadline and we will give you a written estimate and schedule the crew around it." },
+      { heading: "Estate move-outs", text: "When a parent is moving into assisted living or a smaller home, we handle the estate move-out: what is not going with them is cleared from the house, garage and outbuildings in one coordinated visit." },
+    ],
     points: [
       "Whole-house, attic, basement, garage, and outbuilding cleanouts",
       "Sorting, loading, and hauling handled by our crew",
@@ -183,6 +196,12 @@ export const services: Service[] = [
     icon: "boxes",
     intro:
       "Some jobs are not a pickup. They are the entire house. We clear rooms, closets, attics, basements, and garages so the property is empty and usable again.",
+    metaTitle: "Whole-House Cleanouts | Empty an Entire Home in Michigan",
+    metaDescription:
+      "Whole-house cleanouts in Port Huron and the Blue Water Area. Every room, attic, basement and garage emptied by our crew so the home is ready for repairs, sale or a new tenant.",
+    body: [
+      { heading: "When the whole house has to be emptied", text: "A whole-house cleanout is for homes where nearly everything has to go: after a sale, a foreclosure, a long vacancy or a family move. We go room by room, top to bottom, and leave the house broom-swept." },
+    ],
     points: [
       "Every room, closet, attic, and basement",
       "Furniture, household goods, debris, and leftover belongings",
@@ -234,6 +253,13 @@ export const services: Service[] = [
     icon: "tag",
     intro:
       "Listings stall when a house is still full. We clear the property before photos, showings, or closing so the home is empty and easier to sell.",
+    metaTitle: "Pre-Sale Property Cleanouts | Clean Out a House for Sale",
+    metaDescription:
+      "Pre-sale property cleanouts in Port Huron and Michigan's Blue Water Area. We clear houses before listing photos, showings or closing, on the seller's and realtor's schedule.",
+    body: [
+      { heading: "Clean out a house for sale", text: "Empty homes photograph and show better. We clear the contents before listing photos, work around stagers, painters and cleaners, and finish on the date your realtor needs." },
+      { heading: "For realtors and investors", text: "Send photos and a lockbox code. We give one clear price for the property and send photos when it is done, so you never have to drive out to check." },
+    ],
     points: [
       "Pre-listing and pre-closing cleanouts",
       "Whole-home, garage, and outbuilding clearing",
