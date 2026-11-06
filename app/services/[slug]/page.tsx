@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
@@ -22,8 +23,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getService(slug);
   if (!service) return {};
   return {
-    title: `${service.title} in Michigan`,
-    description: `${service.short} Serving Port Huron and Michigan's Blue Water Area.`,
+    title: service.metaTitle ?? `${service.title} in Michigan`,
+    description:
+      service.metaDescription ??
+      `${service.short} Serving Port Huron and Michigan's Blue Water Area.`,
     alternates: {
       canonical: `/services/${slug}`,
     },
@@ -66,6 +69,29 @@ export default async function ServicePage({ params }: Props) {
               <Button href={site.estimatePath}>Get a Free Estimate</Button>
             </div>
           </div>
+        </Container>
+      </section>
+      {service.body?.length ? (
+        <section className="pb-16 lg:pb-24">
+          <Container className="max-w-3xl space-y-8">
+            {service.body.map((block) => (
+              <div key={block.heading}>
+                <h2 className="font-serif text-2xl font-medium text-navy sm:text-3xl">{block.heading}</h2>
+                <p className="mt-3 text-[15px] leading-7 text-muted">{block.text}</p>
+              </div>
+            ))}
+          </Container>
+        </section>
+      ) : null}
+      <section className="pb-12">
+        <Container className="max-w-3xl text-[15px] leading-7 text-muted">
+          Part of our full range of{" "}
+          <Link href="/" className="font-semibold text-green hover:underline">property cleanouts in Michigan</Link>
+          . We serve{" "}
+          <Link href="/areas/port-huron" className="font-semibold text-green hover:underline">Port Huron</Link>,{" "}
+          <Link href="/areas/marysville" className="font-semibold text-green hover:underline">Marysville</Link>,{" "}
+          <Link href="/areas/fort-gratiot" className="font-semibold text-green hover:underline">Fort Gratiot</Link> and{" "}
+          <Link href="/areas/st-clair" className="font-semibold text-green hover:underline">St. Clair</Link>.
         </Container>
       </section>
       <PhotoCta />
