@@ -3,6 +3,7 @@ import { Fraunces, Nunito } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Header } from "@/components/Header";
+import { MobileEstimateBar } from "@/components/MobileEstimateBar";
 import { localBusinessJsonLd } from "@/lib/schema";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -58,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${nunito.variable} ${fraunces.variable} h-full antialiased`}>
-      <body className={`${nunito.className} min-h-full flex flex-col bg-cream font-sans text-ink`}>
+      <body className={`${nunito.className} min-h-full flex flex-col bg-cream pb-20 lg:pb-0 font-sans text-ink`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
@@ -66,6 +67,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <MobileEstimateBar />
         <GoogleAnalytics />
       </body>
     </html>
