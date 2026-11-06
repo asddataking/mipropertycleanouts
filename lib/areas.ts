@@ -52,8 +52,8 @@ export const areaPages: AreaPage[] = [
     ],
     localNotes: [
       "Home base: Port Huron, St. Clair County",
-      "Neighborhoods we work in often: the South Park area, Old Town, and the neighborhoods along Pine Grove Avenue and Military Street",
-      "Estate timing can be coordinated with probate matters handled at the St. Clair County courthouse in Port Huron",
+      "Neighborhoods we work in often: the South Park neighborhood, the Olde Town Historic District, and the neighborhoods along Pine Grove Avenue and Military Street",
+      "Estate timing can be coordinated with probate matters at the St. Clair County Probate Court, 201 McMorran Blvd. in Port Huron",
     ],
     faqs: [
       {
@@ -103,7 +103,7 @@ export const areaPages: AreaPage[] = [
     ],
     localNotes: [
       "City of Marysville, St. Clair County, along the St. Clair River south of Port Huron",
-      "Neighborhoods we work in often: homes off Gratiot Boulevard, Busha Highway, and the residential streets near the riverfront",
+      "Neighborhoods we work in often: homes off Gratiot Boulevard, Busha Highway, and the residential streets near River Road and the riverfront",
       "Close enough to Port Huron that same-week scheduling is common",
     ],
     faqs: [
@@ -141,7 +141,7 @@ export const areaPages: AreaPage[] = [
       {
         heading: "Lake homes, cottages and larger lots",
         body: [
-          "Properties along Lakeshore Road (M-25) and the streets toward the lake often come with seasonal storage, boats and trailers, and an outbuilding or two. We include all of it in one estimate so nothing gets left behind.",
+          "Properties along Lakeshore Road, the M-25 corridor, and the streets toward the lake often come with seasonal storage, boats and trailers, and an outbuilding or two. We include all of it in one estimate so nothing gets left behind.",
           "For estates, we work through the house first, then the garage and outbuildings, setting aside anything the family wants to keep.",
         ],
       },
@@ -154,7 +154,7 @@ export const areaPages: AreaPage[] = [
     ],
     localNotes: [
       "Fort Gratiot Township, St. Clair County, on the Lake Huron shoreline north of Port Huron",
-      "Areas we work in often: homes along Lakeshore Road (M-25), Krafft Road, and the subdivisions near Birchwood Mall",
+      "Areas we work in often: homes along Lakeshore Road and Krafft Road, and the subdivisions near Birchwood Mall on 24th Avenue",
       "Outbuildings, pole barns and sheds can be included in the same estimate",
     ],
     faqs: [
