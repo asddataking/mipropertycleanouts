@@ -34,6 +34,7 @@ export const navLinks = [
 export const footerQuickLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/services/property-cleanouts", label: "Property Cleanouts" },
   { href: "/services/estate-cleanouts", label: "Estate Cleanouts" },
   { href: "/areas", label: "Areas We Serve" },
   { href: "/about", label: "About Us" },
@@ -141,9 +142,75 @@ export type Service = {
   metaTitle?: string;
   metaDescription?: string;
   body?: { heading: string; text: string }[];
+  pricing?: string[];
+  faqs?: { question: string; answer: string }[];
 };
 
 export const services: Service[] = [
+  {
+    slug: "property-cleanouts",
+    title: "Property Cleanouts",
+    short:
+      "Estate, rental, landlord, foreclosure and realtor cleanouts when a property has to be emptied.",
+    cardImage:
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+    icon: "boxes",
+    intro:
+      "A property cleanout is the job of emptying a house or building so it can be sold, rented, transferred or turned over. We handle estate and probate cleanouts, rental and landlord turnovers, foreclosure cleanouts and realtor-requested cleanouts throughout Michigan's Blue Water Area.",
+    metaTitle: "Property Cleanouts in Michigan | Estate, Rental, Foreclosure & Realtor",
+    metaDescription:
+      "Property cleanouts in Port Huron and Michigan's Blue Water Area. Estate, rental, landlord, foreclosure and realtor cleanouts. Upload photos for a free estimate or call (810) 242-0140.",
+    body: [
+      {
+        heading: "Estate and probate cleanouts",
+        text:
+          "When a home is inherited or going through probate, we empty it so the family, executor or attorney can sell, transfer or close the estate. We set aside photos, paperwork and keepsakes you ask us to watch for. See our dedicated estate cleanouts page for more on that work.",
+      },
+      {
+        heading: "Rental and landlord cleanouts",
+        text:
+          "After a move-out, an eviction or an abandoned unit, leftover furniture and debris delay turnover. We clear the rental so it is ready for cleaning, repairs and the next tenant. Landlords and property managers can start with photos and a target date.",
+      },
+      {
+        heading: "Foreclosure and realtor cleanouts",
+        text:
+          "Foreclosure and bank-owned properties, and houses about to be listed, often have to be empty for inspections, photos, showings or closing. We work from photos and access instructions, give a written estimate, and can finish on the schedule your realtor or asset manager needs.",
+      },
+    ],
+    points: [
+      "Estate, probate, rental, landlord, foreclosure and pre-sale cleanouts",
+      "Whole-house, attic, basement, garage and outbuilding clearing",
+      "Sorting, loading and hauling handled by our crew",
+      "Written estimate from photos or a walkthrough, before we start",
+      "Property left empty and ready for cleaning, repairs, listing or the next occupant",
+    ],
+    pricing: [
+      "We do not publish a price list. Every property packs out differently, so we estimate from photos or a walkthrough and give you a written estimate before any work begins.",
+      "The estimate is based on how much has to come out, the labor and hauling required, and access to the property. Upload photos or call (810) 242-0140 for a free estimate.",
+    ],
+    faqs: [
+      {
+        question: "What is a property cleanout?",
+        answer:
+          "A property cleanout is emptying a house or building so it is ready to sell, rent, transfer or turn over. It is more than a junk pickup. The crew clears furniture, household goods and leftover belongings, and can include the garage and outbuildings.",
+      },
+      {
+        question: "Do you handle foreclosures and realtor listings?",
+        answer:
+          "Yes. We clear foreclosure and bank-owned properties and we empty houses before listing photos, showings or closing. Send photos, access instructions and the deadline for a written estimate.",
+      },
+      {
+        question: "How do you set the price?",
+        answer:
+          "From photos or a walkthrough. There is no standard published rate. You receive a written estimate to approve before we start. You can also call (810) 242-0140.",
+      },
+      {
+        question: "Who performs the work?",
+        answer:
+          "MI Property Cleanouts is the local listing. Cleanout services are performed by Junk Command of MI, a veteran-owned, fully insured team based in Port Huron.",
+      },
+    ],
+  },
   {
     slug: "estate-cleanouts",
     title: "Estate Cleanouts",
@@ -224,6 +291,27 @@ export const services: Service[] = [
       "Judgment-free, discreet service",
       "Labor-heavy jobs that standard junk pickup cannot handle",
       "Progress toward a livable, empty, or sale-ready property",
+    ],
+    pricing: [
+      "Hoarding and heavy-accumulation cleanouts are estimated from photos or a walkthrough, not from a published price list. The cost depends on how packed the property is, the labor and hauling involved, and access to the house.",
+      "We give you a written estimate before we start. Call (810) 242-0140 or upload photos for a free estimate. If the job should be done in more than one visit, we will say so up front.",
+    ],
+    faqs: [
+      {
+        question: "How is a hoarding cleanout different from a regular property cleanout?",
+        answer:
+          "The labor is heavier and the work has to be more patient. Packed rooms, tight paths and the need to sort carefully take a crew that can move slowly and treat the household with respect.",
+      },
+      {
+        question: "Will you be discreet?",
+        answer:
+          "Yes. We work without judgment and without drawing extra attention to the job. Many families who hire us live out of town and start with photos.",
+      },
+      {
+        question: "How do you price hoarding cleanouts?",
+        answer:
+          "From photos or a walkthrough. There is no flat published rate, because every house is packed differently. The estimate is written and agreed before we start. You can also call (810) 242-0140.",
+      },
     ],
   },
   {

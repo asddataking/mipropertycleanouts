@@ -7,6 +7,7 @@ import { Container } from "@/components/Container";
 import { MapEmbed } from "@/components/MapEmbed";
 import { PhotoCta } from "@/components/home/PhotoCta";
 import { areaPages, getAreaPage } from "@/lib/areas";
+import { cityServiceCitySlugs } from "@/lib/city-services";
 import { areaJsonLd } from "@/lib/schema";
 import { site } from "@/lib/site";
 
@@ -96,6 +97,14 @@ export default async function AreaPage({ params }: Props) {
                 Cleanout services in {page.name}
               </h2>
               <ul className="mt-4 grid gap-2 text-[15px] sm:grid-cols-2">
+                {cityServiceCitySlugs.includes(page.slug as typeof cityServiceCitySlugs[number]) ? (
+                  <>
+                    <li><Link className="font-semibold text-green hover:underline" href={`/areas/${page.slug}/property-cleanouts`}>Property cleanouts in {page.name}</Link></li>
+                    <li><Link className="font-semibold text-green hover:underline" href={`/areas/${page.slug}/hoarding-cleanouts`}>Hoarding cleanouts in {page.name}</Link></li>
+                  </>
+                ) : null}
+                <li><Link className="font-semibold text-green hover:underline" href="/services/property-cleanouts">Property cleanouts</Link></li>
+                <li><Link className="font-semibold text-green hover:underline" href="/services/hoarding-cleanouts">Hoarding cleanouts</Link></li>
                 <li><Link className="font-semibold text-green hover:underline" href="/services/estate-cleanouts">Estate cleanouts in {page.name}</Link></li>
                 <li><Link className="font-semibold text-green hover:underline" href="/services/pre-sale-property-cleanouts">Pre-sale property cleanouts</Link></li>
                 <li><Link className="font-semibold text-green hover:underline" href="/services/whole-home-cleanouts">Whole-house cleanouts</Link></li>

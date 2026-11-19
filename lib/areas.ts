@@ -15,6 +15,8 @@ export type AreaPage = {
   localNotes: string[];
   faqs: AreaFaq[];
   nearby: string[];
+  /** Short label on the /areas hub cards. Defaults to estate & pre-sale. */
+  hubTeaser?: string;
 };
 
 /**
@@ -72,7 +74,7 @@ export const areaPages: AreaPage[] = [
           "Port Huron is our home base, so we can usually schedule quickly. Send photos and your listing date and we will build the job around it.",
       },
     ],
-    nearby: ["fort-gratiot", "marysville", "st-clair"],
+    nearby: ["fort-gratiot", "marysville", "st-clair", "kimball"],
   },
   {
     slug: "marysville",
@@ -123,7 +125,7 @@ export const areaPages: AreaPage[] = [
           "When items are in good condition we donate them where we can, and we recycle metal. The rest is disposed of properly.",
       },
     ],
-    nearby: ["port-huron", "st-clair", "fort-gratiot"],
+    nearby: ["port-huron", "st-clair", "fort-gratiot", "kimball"],
   },
   {
     slug: "fort-gratiot",
@@ -174,7 +176,7 @@ export const areaPages: AreaPage[] = [
           "Not necessarily. We can work with a lockbox or a key holder, and we send photos when the job is finished.",
       },
     ],
-    nearby: ["port-huron", "marysville", "st-clair"],
+    nearby: ["port-huron", "marysville", "st-clair", "kimball"],
   },
   {
     slug: "st-clair",
@@ -225,7 +227,161 @@ export const areaPages: AreaPage[] = [
           "Yes. We work in the city and the surrounding township. Send the address with your estimate request.",
       },
     ],
-    nearby: ["marysville", "port-huron", "fort-gratiot"],
+    nearby: ["marysville", "port-huron", "fort-gratiot", "marine-city"],
+  },
+  {
+    slug: "kimball",
+    name: "Kimball",
+    placeName: "Kimball Township",
+    zips: ["48074"],
+    geo: { latitude: 42.9487025, longitude: -82.5620099 },
+    metaTitle: "Property & Hoarding Cleanouts in Kimball Township, MI",
+    metaDescription:
+      "Property and hoarding cleanouts in Kimball Township, MI, including Smiths Creek and Wadhams. Upload photos for a free estimate or call (810) 242-0140.",
+    h1: "Property and hoarding cleanouts in Kimball Township, MI",
+    lede:
+      "Kimball Township is just west of Port Huron, with homes in Smiths Creek, Wadhams and along the I-69 and Lapeer Road corridors. We empty houses, garages and outbuildings for estate, rental, foreclosure and realtor cleanouts, and we take discreet hoarding and heavy-accumulation jobs as well.",
+    sections: [
+      {
+        heading: "Property cleanouts in the township",
+        body: [
+          "A Kimball property cleanout often includes more than the house. Lots here commonly have a garage, shed or pole barn, and we can include those buildings in one estimate so the whole property is empty for a sale, a rental turnover or an estate transfer.",
+          "Families, landlords and realtors can start with photos. We give a written estimate before we start and leave the property swept and ready for the next step.",
+        ],
+      },
+      {
+        heading: "Hoarding cleanouts, handled quietly",
+        body: [
+          "When a township home or outbuilding has become too packed to use, we provide a judgment-free hoarding cleanout. The work is labor-heavy and planned from photos or a walkthrough, with items you want kept set aside.",
+        ],
+      },
+    ],
+    localNotes: [
+      "Kimball Township, St. Clair County, west of Port Huron",
+      "Communities in the township include Smiths Creek and Wadhams",
+      "I-69 and Lapeer Road (M-19) run through the township",
+    ],
+    faqs: [
+      {
+        question: "Do you serve Smiths Creek and Wadhams?",
+        answer:
+          "Yes. Both are part of Kimball Township and are in our Blue Water Area service area. Send the address with your photos.",
+      },
+      {
+        question: "Can outbuildings be part of the same job?",
+        answer:
+          "Yes. Include photos of garages, sheds and pole barns so the written estimate covers the whole property.",
+      },
+      {
+        question: "How do you price a cleanout in Kimball?",
+        answer:
+          "From photos or a walkthrough. There is no published price list. You get a written estimate before we start, or you can call (810) 242-0140.",
+      },
+    ],
+    nearby: ["port-huron", "marysville", "richmond"],
+    hubTeaser: "Property & hoarding cleanouts",
+  },
+  {
+    slug: "richmond",
+    name: "Richmond",
+    placeName: "Richmond",
+    zips: ["48062"],
+    geo: { latitude: 42.8091969, longitude: -82.7557554 },
+    metaTitle: "Property & Hoarding Cleanouts in Richmond, MI",
+    metaDescription:
+      "Property and hoarding cleanouts in Richmond, MI, on the Macomb–St. Clair county line. Free photo estimate or call (810) 242-0140.",
+    h1: "Property and hoarding cleanouts in Richmond, MI",
+    lede:
+      "Richmond sits on the Macomb–St. Clair county line and is on our Blue Water Area service list. From our Port Huron base we empty homes for sale, rent, estate transfer or foreclosure, and we take discreet hoarding cleanouts when a house has become too packed to handle alone.",
+    sections: [
+      {
+        heading: "Property cleanouts for families, landlords and realtors",
+        body: [
+          "A Richmond property cleanout means clearing the house — and the garage or outbuildings when they are part of the job — so the property can be listed, turned over or transferred. We work from photos, give a written estimate and can coordinate with a realtor or landlord on timing.",
+        ],
+      },
+      {
+        heading: "Hoarding cleanouts",
+        body: [
+          "Hoarding and heavy-accumulation jobs are handled quietly and without judgment. We plan the work from photos or a walkthrough and set aside anything you ask us to keep.",
+        ],
+      },
+    ],
+    localNotes: [
+      "City of Richmond, on the Macomb–St. Clair county line",
+      "On the MI Property Cleanouts Blue Water Area service list",
+      "Crews work from our Port Huron base",
+    ],
+    faqs: [
+      {
+        question: "Is Richmond in your service area?",
+        answer:
+          "Yes. Richmond is listed among the cities and townships we regularly serve. Send the address with your estimate request.",
+      },
+      {
+        question: "Can a realtor or landlord hire you?",
+        answer:
+          "Yes. Photos and access instructions are enough to start a written estimate, and we can work around a listing or turnover date.",
+      },
+      {
+        question: "Do you publish cleanout prices?",
+        answer:
+          "No. Every property is different. We estimate from photos or a walkthrough and provide the number in writing before we start. You can also call (810) 242-0140.",
+      },
+    ],
+    nearby: ["kimball", "marysville", "port-huron"],
+    hubTeaser: "Property & hoarding cleanouts",
+  },
+  {
+    slug: "marine-city",
+    name: "Marine City",
+    placeName: "Marine City",
+    zips: ["48039"],
+    geo: { latitude: 42.7190045, longitude: -82.4941921 },
+    metaTitle: "Property & Hoarding Cleanouts in Marine City, MI",
+    metaDescription:
+      "Property and hoarding cleanouts in Marine City, MI, on the St. Clair River. Estates, rentals, foreclosures and discreet hoarding jobs. Call (810) 242-0140.",
+    h1: "Property and hoarding cleanouts in Marine City, MI",
+    lede:
+      "Marine City is a St. Clair River community south of St. Clair and is on our regular service list. We empty homes for estate, rental, foreclosure and realtor cleanouts, and we handle discreet hoarding cleanouts when a packed house needs a patient crew.",
+    sections: [
+      {
+        heading: "Property cleanouts in a river city",
+        body: [
+          "Whether the house is being sold, rented, transferred or turned over after a foreclosure, we clear the contents so the property is ready for photos, repairs or the next occupant. Families, landlords and realtors can start with photos and a written estimate.",
+        ],
+      },
+      {
+        heading: "Hoarding cleanouts, kept private",
+        body: [
+          "In a small river city, privacy matters. We work quietly, without judgment, and we set aside what you want to keep as we clear packed rooms, basements and garages.",
+        ],
+      },
+    ],
+    localNotes: [
+      "City of Marine City, St. Clair County, on the St. Clair River south of St. Clair",
+      "ZIP 48039",
+      "On the MI Property Cleanouts Blue Water Area service list",
+    ],
+    faqs: [
+      {
+        question: "Do you travel to Marine City from Port Huron?",
+        answer:
+          "Yes. Marine City is on our service list. Send the address and photos and we will confirm the job in the written estimate.",
+      },
+      {
+        question: "Can you empty a house before listing photos?",
+        answer:
+          "Yes. Pre-sale cleanouts can be scheduled before photographs and showings.",
+      },
+      {
+        question: "How do you price the work?",
+        answer:
+          "From photos or a walkthrough, with a written estimate before we start. There is no published price list. You can also call (810) 242-0140.",
+      },
+    ],
+    nearby: ["st-clair", "marysville", "port-huron"],
+    hubTeaser: "Property & hoarding cleanouts",
   },
 ];
 

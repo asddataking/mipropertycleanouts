@@ -59,8 +59,42 @@ export default function AreasPage() {
                 className="rounded-2xl border border-line bg-cream p-5 transition-colors hover:border-green"
               >
                 <span className="block font-serif text-xl text-navy">{area.name}</span>
-                <span className="mt-1 block text-sm text-muted">Estate &amp; pre-sale cleanouts</span>
+                <span className="mt-1 block text-sm text-muted">{area.hubTeaser ?? "Estate & pre-sale cleanouts"}</span>
               </Link>
+            ))}
+          </div>
+          <h2 className="mt-14 font-serif text-3xl font-medium text-navy">Property and hoarding cleanouts by city</h2>
+          <p className="mt-3 max-w-3xl text-[15px] leading-7 text-muted">
+            Dedicated pages for{" "}
+            <Link href="/services/property-cleanouts" className="font-semibold text-green hover:underline">property cleanouts</Link>
+            {" "}and{" "}
+            <Link href="/services/hoarding-cleanouts" className="font-semibold text-green hover:underline">hoarding cleanouts</Link>
+            {" "}in the Blue Water Area cities below.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              ["port-huron", "Port Huron"],
+              ["marysville", "Marysville"],
+              ["kimball", "Kimball"],
+              ["st-clair", "St. Clair"],
+              ["richmond", "Richmond"],
+              ["marine-city", "Marine City"],
+            ].map(([slug, name]) => (
+              <div key={slug} className="rounded-2xl border border-line bg-cream p-5">
+                <span className="block font-serif text-xl text-navy">{name}</span>
+                <ul className="mt-2 space-y-1 text-sm">
+                  <li>
+                    <Link href={`/areas/${slug}/property-cleanouts`} className="font-semibold text-green hover:underline">
+                      Property cleanouts
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/areas/${slug}/hoarding-cleanouts`} className="font-semibold text-green hover:underline">
+                      Hoarding cleanouts
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             ))}
           </div>
         </Container>
