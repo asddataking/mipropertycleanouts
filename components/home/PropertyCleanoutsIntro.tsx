@@ -16,17 +16,22 @@ export function PropertyCleanoutsIntro() {
         </p>
         <p className="mt-4 text-[16px] leading-8 text-muted">
           Most of our work is{" "}
+          <Link href="/services/property-cleanouts" className="font-semibold text-green hover:underline">property cleanouts</Link>,{" "}
           <Link href="/services/estate-cleanouts" className="font-semibold text-green hover:underline">estate cleanouts</Link>,{" "}
           <Link href="/services/pre-sale-property-cleanouts" className="font-semibold text-green hover:underline">pre-sale cleanouts</Link>,{" "}
-          <Link href="/services/rental-property-cleanouts" className="font-semibold text-green hover:underline">rental property cleanouts</Link>{" "}
-          and{" "}
-          <Link href="/services/whole-home-cleanouts" className="font-semibold text-green hover:underline">whole-house cleanouts</Link>{" "}
+          <Link href="/services/rental-property-cleanouts" className="font-semibold text-green hover:underline">rental property cleanouts</Link>,{" "}
+          <Link href="/services/whole-home-cleanouts" className="font-semibold text-green hover:underline">whole-house cleanouts</Link>
+          {" "}and{" "}
+          <Link href="/services/hoarding-cleanouts" className="font-semibold text-green hover:underline">hoarding cleanouts</Link>{" "}
           in{" "}
           <Link href="/areas/port-huron" className="font-semibold text-green hover:underline">Port Huron</Link>,{" "}
           <Link href="/areas/marysville" className="font-semibold text-green hover:underline">Marysville</Link>,{" "}
-          <Link href="/areas/fort-gratiot" className="font-semibold text-green hover:underline">Fort Gratiot</Link>{" "}
+          <Link href="/areas/fort-gratiot" className="font-semibold text-green hover:underline">Fort Gratiot</Link>,{" "}
+          <Link href="/areas/st-clair" className="font-semibold text-green hover:underline">St. Clair</Link>,{" "}
+          <Link href="/areas/kimball" className="font-semibold text-green hover:underline">Kimball</Link>,{" "}
+          <Link href="/areas/richmond" className="font-semibold text-green hover:underline">Richmond</Link>{" "}
           and{" "}
-          <Link href="/areas/st-clair" className="font-semibold text-green hover:underline">St. Clair</Link>.
+          <Link href="/areas/marine-city" className="font-semibold text-green hover:underline">Marine City</Link>.
         </p>
       </Container>
     </section>
